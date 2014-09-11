@@ -1,12 +1,11 @@
 body {
-  border-top: 5px solid $c_blue;
-  padding-top: 10px;
   line-height: 24px;
 }
 
 .page-wrapper {
   float: right;
   width: 100%;
+  min-height: 100%;
   @include transition-duration(0.2s);
 }
 
@@ -97,14 +96,9 @@ body {
 
   .product-image {
     a {
-      @include border-radius(165px);
-      border-width: 2px;
       width: 160px;
       height: 160px;
-    }
-
-    img {
-      @include border-radius(45px);
+      border: none;
     }
   }
 }
@@ -140,10 +134,6 @@ ul#products li {
       border-width: 2px;
       padding: 30px 22px 30px 20px;
       float: none;
-
-      img {
-        @include border-radius(0);
-      }
     }
   }
 }
@@ -179,6 +169,8 @@ footer#footer {
   padding-top: 30px;
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
+  height: 50px;
 
   &, a, h5 {
     color: white;

@@ -1,19 +1,26 @@
 /*--------------------------------------*/
 /* Colors
 /*--------------------------------------*/
-$c_green:       #8dba53 !default;  /* Spree green    */
+$c_green:       #404040 !default;  /* Spree green    */
+$c_dark_green:  #00910e !default;
 $c_red:         #e45353 !default;  /* Error red      */
-$c_blue:        #50A2F3 !default;
+$c_blue:        #404040 !default;
+$c_bright_blue: #00ADEE !default;
 $c_orange:      #ff9600 !default;
+$c_black:       #000 !default;
+$c_white:       #fff !default;
+$c_background:  #fffff1 !default;
+$c_highlight:   #daeeff !default;
+$c_light_grey:  #c9c9c9 !default;
 
 $layout_background_color:   #FFFFFF !default;
-$title_text_color:          #404042 !default;
+$title_text_color:          #000 !default;
 $body_text_color:           #919191 !default;
 $link_text_color:           #61a1f0 !default;
 
 $product_background_color:  #FFFFFF !default;
-$product_title_text_color:  #404042 !default;
-$product_body_text_color:   #404042 !default;
+$product_title_text_color:  #000 !default;
+$product_body_text_color:   #000 !default;
 $product_link_text_color:   #BBBBBB !default;
 
 /* -------------------------------------------- */
@@ -59,5 +66,5 @@ $ff_base:       'Open Sans', sans-serif !default;
       $base_font_size:                        16px !default;
       $border_color:                          lighten($body_text_color, 30) !default;
       $default_border:                        1px solid $border_color !default;
-      $button_border_color:                   rgba(0, 138, 189, .75) !default;
+      $button_border_color:                   rgba($body_text_color, .75) !default;
       $table_head_color:                      lighten($body_text_color, 60) !default;

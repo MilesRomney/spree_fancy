@@ -1,6 +1,6 @@
 [data-hook="product_price"] {
   margin-bottom: 24px;
-  border-bottom: 2px solid lighten($c_blue, 30);
+  border-bottom: 1px solid rgba($c_black, 0.1);
 
   #product-price {
     float: left;
@@ -29,7 +29,7 @@
   tr {
 
     &.odd {
-      background-color: lighten($c_blue, 35);
+      background-color: lighten($c_blue, 73);
     }
     td {
       padding-left: 0;
@@ -47,16 +47,72 @@
   }
 }
 
-#main-image {
-  border: 2px solid lighten($c_green, 30) !important;
-  overflow: hidden;
+#product-description {
+  font-size: 15px;
 
-  &, img {
-    @include border-radius(165px);
+  p {
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 0;
+
+    &:first-child {
+      heading {
+        margin-top: 0;
+      }
+    }
+
+    heading {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 25px;
+    }
   }
 
-  img {
-    padding: 46px 37px 46px 38px;
+  .attribution {
+    width: 40%;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-left: 21px;
+
+    &:before {
+      content: '—';
+      position: absolute;
+      margin-left: -22px;
+    }
+
+    .bona-fides {
+      font-size: 0.8em;
+      line-height: 1.5;
+    }
+  }
+
+  badge {
+    &.storybundle-cyberpunk {
+      display: block;
+      float: right;
+      width: 125px;
+      height: 125px;
+      background: url(/assets/home-by-hand/2014-09/storybundle-cyberpunk-badge.png);
+      background-size: 125px 125px;
+    }
+  }
+
+  shipping {
+    display: block;
+    font-size: 1.2em;
+    margin-top: -25px;
+    color: $c_bright_blue;
+    font-weight: bold;
+  }
+}
+
+#product-images {
+  #main-image {
+    overflow: hidden;
+    border: none;
   }
 }
 
@@ -78,10 +134,6 @@
       &:hover {
         @include opacity(1);
         border-color: $c_green;
-      }
-
-      &, img {
-        @include border-radius(165px);
       }
 
       img {

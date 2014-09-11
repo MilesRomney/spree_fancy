@@ -42,7 +42,6 @@
         display: block;
         padding: 10px 0 10px 24px !important;
         background-color: lighten($c_blue, 10);
-        border-bottom: 1px solid $c_blue;
         text-transform: uppercase;
         font-weight: 600;
 
@@ -129,16 +128,22 @@ nav#top-nav-bar {
     font-size: 16px;  
   }
 }
+
+nav.columns.eight {
+  margin-right: 0;
+}
+
 nav #main-nav-bar, nav#top-nav-bar {
   margin-top: 40px;
   text-align: right;
+  border-bottom: none;
 
   li {
     a {
       font-weight: 600 !important;
 
       &:hover, &.active {
-        color: $c_green !important;
+        color: $c_highlight !important;
       }   
     }
 
@@ -147,26 +152,65 @@ nav #main-nav-bar, nav#top-nav-bar {
         color: $c_green;
 
         &:hover {
-          color: darken($c_green, 5);
+          color: darken($c_highlight, 5);
         }
       }
     }
   }
 }
 nav #main-nav-bar li {
-  a {
-    padding-right: 30px;
-  }
-
   &:last-child {
     a {
       padding-right: 0px;   
     }  
   }
 }
+
 nav#taxonomies .taxonomy-root, #sidebar_products_search .filter-title, .product-section-title {
   color: $c_orange;
-  border-bottom: 2px solid lighten($c_orange, 40);
+  border-bottom: none;
   margin-bottom: 16px;
   font-size: 16px;
+}
+
+#header {
+  background: $c_black;
+  padding-bottom: 15px;
+  margin: 0;
+
+  a {
+    color: $c_white;
+  }
+
+  nav.seven.columns {
+    width: 320px;
+  }
+
+  figure#logo {
+    img {
+      padding-top: 15px;
+    }
+  }
+}
+
+#subheader {
+  background-color: $c_white;
+  color: $c_black;
+  overflow: hidden;
+  padding: 0px;
+
+  .subheader-wrapper {
+    padding: 20px 10px;
+    color: white;
+    overflow: hidden;
+
+    h1 {
+      clear: both;
+      color: $c_black;
+      border-bottom: 1px solid rgba($c_black, 0.1);
+      padding-bottom: 15px;
+      font-size: 34px;
+      font-weight: 300;
+    }
+  }
 }

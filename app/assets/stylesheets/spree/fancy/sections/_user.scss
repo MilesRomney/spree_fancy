@@ -17,3 +17,18 @@
   }
   
 }
+
+.account-summary {
+  font-size: 15px;
+  
+  h3 {
+    display: none;
+  }
+}
+
+.account-my-orders {
+  h3 {
+    border: none !important;
+    color: $c_bright_blue !important;
+  }
+}

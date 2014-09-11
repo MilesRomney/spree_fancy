@@ -15,3 +15,12 @@ li#link-to-cart {
   padding: 7px !important;
   width: 60px !important;
 }
+
+#cart-detail {
+  thead {
+    tr {
+      background: $c_bright_blue;
+      color: $c_white;
+    }
+  }
+}

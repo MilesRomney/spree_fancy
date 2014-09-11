@@ -4,19 +4,17 @@
 
   li {
     @include transition-duration(0.3s);
-    padding: 30px 20px;
+    padding: 10px 25px;
     margin-top: -20px;
     margin-bottom: -20px;
     margin-right: 0;
     color: white;
     font-size: 14px;
+    background-color: $c_light_grey;
 
     &.current, &.current-first, &.current-last {
-      @include single-box-shadow(darken($c_green, 10), 0, 0, 10px, 0);
-      background-color: $c_orange;
+      background-color: $c_bright_blue;
       color: white;
-      border-left: 5px solid lighten($c_orange, 8);
-      border-right: 5px solid lighten($c_orange, 8);
     }    
 
     &.current, &.current-first, &.current-last,
@@ -45,7 +43,7 @@
 
 fieldset {
   border: none !important;
-  border-top: 2px solid lighten($c_blue, 30) !important;
+  border-top: 1px solid lighten($c_blue, 30) !important;
 
   legend {
     font-size: 16px !important;
@@ -64,11 +62,12 @@ fieldset {
     font-weight: 600;
     color: $c_blue;
     text-align: center;
+    border-width: 1px;
   }  
 
   tr[data-hook="order_total"] {
     td {
-      border-top: 2px solid lighten($c_green, 30);
+      border-top: 1px solid lighten($c_green, 30);
       color: $c_green;
     }  
   }
@@ -77,7 +76,7 @@ fieldset {
 #summary-order-charges, #order-charges {
   td {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 600 !important;
     
     &:last-child, &:last-child span {
       color: $c_orange;
@@ -104,6 +103,50 @@ fieldset {
   }  
 }
 
+h1[data-hook="checkout_title"] {
+  border: none !important;
+  font-size: 25px !important;
+  text-transform: uppercase;
+  position: relative;
+  top: -13px;
+  left: 50px;
+  color: $c_light_grey !important;
+  font-weight: 400 !important;
+}
+
+h3.stock-location {
+  display: none;
+}
+
+h5.stock-shipping-method-title {
+  background-color: $c_bright_blue !important;
+  color: $c_white;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 5px 10px;
+}
+
+table.stock-contents, table#line-items, table.order-summary {
+  thead {
+    tr {
+      background: $c_bright_blue;
+      color: $c_white;
+
+      th {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+      }
+    }
+  }
+
+  tbody {
+    tr:last-child {
+      border: none;
+    }
+  }
+}
+
 #summary-order-total, [data-hook="order_details"] [data-hook="order_item_total"] span,
 #order_total {
   color: $c_green !important;  
@@ -116,10 +159,25 @@ fieldset {
 
 [data-hook="order_details_total"] {
   td {
-    border-top: 2px solid lighten($c_blue, 30);
+    border-top: 1px solid lighten($c_blue, 30);
   }
 }
 
 fieldset#order_details hr {
   display: none;
+}
+
+fieldset#order_summary {
+  border-top: none !important;
+
+  strong {
+    margin: 30px 0;
+    display: block;
+  }
+}
+
+#order {
+  hr {
+    display: none;
+  }
 }

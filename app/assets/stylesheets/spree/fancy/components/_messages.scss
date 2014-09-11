@@ -1,3 +1,9 @@
 .flash {
-  @include border-radius(3px)  
+  @include border-radius(3px);
+
+  border: 1px solid $c_dark_green;
+  background-color: #e6ffe8 !important;
+  color: $c_dark_green;
+  font-size: 14px;
+  font-weight: 600;
 }

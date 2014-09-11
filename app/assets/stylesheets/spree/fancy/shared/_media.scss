@@ -12,10 +12,6 @@
       }
     }
 
-    #header nav.columns.seven {
-      width: 280px;
-    }
-
     #home-slider {
       h1.product-title {
         font-size: 20px !important;
@@ -192,11 +188,6 @@
       height: 270px;
       margin: 0 auto;
       padding: 15px;
-
-      img {
-        @include border-radius(80px !important);
-        padding: 10px 0 0 0;
-      }
     }
 
     #product-properties tr td, #product-description,
@@ -211,10 +202,6 @@
     #cart-form {
       [data-hook="product_price"] {
         padding-bottom: 10px;
-      }
-      .add-to-cart input[type="number"] {
-        width: 30px;
-        padding: 5px;
       }
       .add-to-cart #add-to-cart-button {
         margin-left: 5px;
