@@ -3,6 +3,8 @@
 //= require jquery.ui.all
 //= require jquery.bxslider
 //= require jquery.dotdotdot-1.5.2
+//= require jquery.easydropdown
+
 //= require matchMedia
 //= require enquire
 
@@ -119,7 +121,11 @@ $(function(){
         statesRequired = data.states_required;
         states = data.states;
         statePara = $('#' + region + 'state');
+        countryPara = $('#' + region + 'country');
         stateSelect = statePara.find('select');
+        stateSelect.easyDropDown({ cutOff: 10 });
+        countrySelect = countryPara.find('select');
+        countrySelect.easyDropDown({ cutOff: 10 });
         stateInput = statePara.find('input');
         stateSpanRequired = statePara.find('state-required');
         if (states.length > 0) {
